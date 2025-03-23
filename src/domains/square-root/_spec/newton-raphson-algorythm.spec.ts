@@ -9,7 +9,6 @@ describe('NewtonRaphsonAlgorithm', () => {
   });
 
   it('should calculate the square root of a positive number correctly', () => {
-    // Test for several positive numbers
     const testCases = [
       { input: 4, expected: 2 },
       { input: 9, expected: 3 },
