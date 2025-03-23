@@ -10,15 +10,15 @@ export const useCalculator = ({ onCalculate }: UseCalculatorProps) => {
   const [inputValue, setInputValue] = useState<number>(0);
 
   const handleAlgorithmChange = (event: SelectChangeEvent<unknown>) => {
-    setAlgorithm(event.target.value as string);
+    throw new Error("Not implemented");
   };
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(Number(event.target.value));
+    throw new Error("Not implemented");
   };
 
   const handleCalculate = () => {
-    onCalculate(algorithm, inputValue);
+    throw new Error("Not implemented");
   };
 
   return {
