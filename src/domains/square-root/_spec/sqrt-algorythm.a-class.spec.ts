@@ -92,7 +92,6 @@ describe('SqrtAlgorithm', () => {
   });
   
   it('should process the square root calculation correctly', () => {
-    // Test with a few numbers to ensure the algorithm works correctly
     const testCases = [
       { input: 4, expected: 2 },
       { input: 9, expected: 3 },
@@ -108,11 +107,9 @@ describe('SqrtAlgorithm', () => {
   });
   
   it('should return 0 for non-processable numbers', () => {
-    // Test with zero
     algorithm.setTarget(0);
     expect(algorithm.process()).toBe(0);
     
-    // Test with negative number
     algorithm.setTarget(-4);
     expect(algorithm.process()).toBe(0);
   });
