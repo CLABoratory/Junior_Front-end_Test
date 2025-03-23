@@ -28,7 +28,7 @@ export abstract class SqrtAlgorithm implements Algorithm {
   }
 
   private shouldContinue(): boolean {
-    return !this.isIterationLimitReached() || this.isToleranceReached();
+    return !this.isIterationLimitReached() && !this.isToleranceReached();
   }
 
   private isIterationLimitReached(): boolean {
@@ -36,7 +36,7 @@ export abstract class SqrtAlgorithm implements Algorithm {
   }
 
   private isToleranceReached(): boolean {
-    return Math.abs(this.number - this.result) < this.tolerance;
+    return Math.abs(this.number - this.result * this.result) < this.tolerance;
   }
 
   protected abstract approximateGuess(): number;
