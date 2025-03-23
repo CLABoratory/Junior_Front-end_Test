@@ -36,7 +36,11 @@ export abstract class SqrtAlgorithm implements Algorithm {
   }
 
   private isToleranceReached(): boolean {
-    return Math.abs(this.number - this.result * this.result) < this.tolerance;
+    return this.getTargetAndResultDifference() < this.tolerance;
+  }
+
+  private getTargetAndResultDifference(): number {
+    return Math.abs(this.number - this.result * this.result);
   }
 
   protected abstract approximateGuess(): number;
